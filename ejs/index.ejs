@@ -2,259 +2,261 @@
 <html lang="ja">
 <%- include('./common/_head') %>
 <body>
-
+  
   <!-- ブログ -->
   <div class="p-blog">
-  <div class="l-inner">
-    <div class="p-blog__title">
-      <%- include('./parts/_c-title',{en:' blog', jp:'ブログ '}) %>
-    </div><!-- /.p-blog__title -->
-    <div class="p-blog__text">
-      <%- include('./parts/_c-text',{text:'ブログにて当店の魅力やスタッフの日常などを発信しております。<br class="u-desktop">是非、ご覧ください！'}) %>
-    </div><!-- /.p-blog__text -->
-    <div class="p-blog__cards">
-      <div class="p-blog__cards-inner">
-        
-        <% const cardLists=[
-        {
-          modifier:" c-card--blog " ,
-          img:" ./images/common/image1.jpg " ,
-          title:" 移転しました！ " ,
-          text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
-        },
-        {
-          modifier:" c-card--blog " ,
-          img:" ./images/common/image2.jpg " ,
-          title:" 移転しました！ " ,
-          text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
-        },
-        {
-          modifier:" c-card--blog " ,
-          img:" ./images/common/image3.jpg " ,
-          title:" 移転しました！ " ,
-          text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
-        },
-        ] %>
-        <% for (var cardList of cardLists) {%>
-          <div class="p-blog__card">
-            <%- include('./parts/_c-card',{
-              modifier : cardList.modifier,  
-              img : cardList.img,  
-              title : cardList.title,  
-              text : cardList.text,  
-            }) %>
-          </div><!-- /.p-cards__item -->
-          <% } %>
-        </div><!-- /.p-blog__card-item -->
-      </div><!-- /.p-blog__card -->
-      <div class="p-blog__btn">
-        <%- include('./parts/_c-btn',{ 
-          modifier : 'c-btn--1' ,
-          text : 'blog' 
-        }) %>
-      </div><!-- /.p-blog__btn -->
-    </div><!-- /.l-inner -->
-  </div><!-- /.p-blog -->
-  
-  
-   <!-- スタッフブログ -->
-   <div class="p-staff">
     <div class="l-inner">
-      <div class="p-staff__title">
-        <%- include('./parts/_c-title',{en:' staff blog', jp:'スタッフブログ '}) %>
-      </div><!-- /.p-staff__title -->
-      <div class="p-staff__text">
-        <%- include('./parts/_c-text',{text:'当社には、総勢24名のスタッフがおります。<br>ひとり一人、ブログを投稿しておりますので、是非ご覧ください。<br>意外な一面が見れるかもしれません！'}) %>
-      </div><!-- /.p-staff__text -->
-      <div class="p-staff__cards">
-        <div class="p-staff__cards-inner">
+      <div class="p-blog__title">
+        <%- include('./parts/_c-title',{en:' blog', jp:'ブログ '}) %>
+      </div><!-- /.p-blog__title -->
+      <div class="p-blog__text">
+        <%- include('./parts/_c-text',{text:'ブログにて当店の魅力やスタッフの日常などを発信しております。<br class="u-desktop">是非、ご覧ください！'}) %>
+      </div><!-- /.p-blog__text -->
+      <div class="p-blog__cards">
+        <div class="p-blog__cards-inner">
           
-          <% const stafflists=[
+          <% const cardLists=[
           {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image4.jpg " ,
-            title:" 展示会in六本木 " ,
-            text:" 4月17日に六本木で行われた家具の展示館に参加させていただきました。... " ,
+            modifier:" c-card--blog " ,
+            img:" ./images/common/image1.jpg " ,
+            title:" 移転しました！ " ,
+            text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
           },
           {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image5.jpg " ,
-            title:" 勉強会 " ,
-            text:" 月に1回行われる当社の勉強会。今回は講師として◯◯さんにお越しいただき、レクシャーを行って... " ,
+            modifier:" c-card--blog " ,
+            img:" ./images/common/image2.jpg " ,
+            title:" 移転しました！ " ,
+            text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
           },
           {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image6.jpg " ,
-            title:" 家具のアウトレット " ,
-            text:" 千葉県にある家具のアウトレットショップへ行ってきました。<br>店内に並ぶ家具の数が多いこと多... " ,
-          },
-          {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image7.jpg " ,
-            title:" 海外出張in Paris " ,
-            text:" みなさんこんにちは！<br> 私は今、海外出張でフランスのパリにきています。... " ,
-          },
-          {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image8.jpg " ,
-            title:" 展示会inミラノ " ,
-            text:" 去年に引き続き、イタリアのミラノで毎年開催されている、ミラノサローネに参加して参りました。... " ,
-          },
-          {
-            modifier:" c-card--staff " ,
-            img:" ./images/common/image9.jpg " ,
-            title:" 新作 " ,
-            text:" こんにちは。恵比寿店の◯◯です。今回は、5日前にイタリアから届いたばかりの新作のチェアーをご紹... " ,
+            modifier:" c-card--blog " ,
+            img:" ./images/common/image3.jpg " ,
+            title:" 移転しました！ " ,
+            text:" 東京都内に移転いたしますた。恵比寿駅から徒歩3分... " ,
           },
           ] %>
-          <% for (var stafflist of stafflists) {%>
-            <div class="p-staff__card">
+          <% for (var cardList of cardLists) {%>
+            <div class="p-blog__card">
               <%- include('./parts/_c-card',{
-                modifier : stafflist.modifier,  
-                img : stafflist.img,  
-                title : stafflist.title,  
-                text : stafflist.text,  
+                modifier : cardList.modifier,  
+                img : cardList.img,  
+                title : cardList.title,  
+                text : cardList.text,  
               }) %>
             </div><!-- /.p-cards__item -->
             <% } %>
-          </div><!-- /.p-staff__card-item -->
-        </div><!-- /.p-staff__card -->
-        <div class="p-staff__btn">
-          <%- include('./parts/_c-btn',{ 
-            modifier : 'c-btn--2' ,
-            text : 'staff blog' 
-          }) %>
-        </div><!-- /.p-staff__btn -->
-      </div><!-- /.l-inner -->
-    </div><!-- /.p-staff -->
-  
-  
-
-    <!-- お知らせ -->
-   <div class="p-news | l-news">
-    <div class="l-inner">
-      <div class="p-news__title">
-        <%- include('./parts/_c-title',{en:' news', jp:' お知らせ '}) %>
-      </div><!-- /.p-news__title -->
-      <div class="p-news__text">
-        <%- include('./parts/_c-text',{text:'こちらでは、当店の最新情報を発信していきます。<br>入荷情報やSALEの情報などお得な情報ばかりですので、是非チェックしてみてください！'}) %>
-      </div><!-- /.p-news__text -->
-      <div class="p-news__cards">
-        <div class="p-news__cards-inner">
-          
-          <% const newslists=[
-          {
-            modifier:" c-card--news " ,
-            img:" ./images/common/image10.jpg " ,
-            title:" お部屋をコーディネート " ,
-            text:" 空間デザイナーをお呼びして、お部屋をおしゃれにコーディネート！プロからのアドバイスをも... " ,
-          },
-          {
-            modifier:" c-card--news " ,
-            img:" ./images/common/image11.jpg " ,
-            title:" 新作入荷！ " ,
-            text:" お待たせいたしました！<br>イタリアよりヴィンテージソファーが入稿いたしました！1... " ,
-          },
-          {
-            modifier:" c-card--news " ,
-            img:" ./images/common/image12.jpg " ,
-            title:" 新作入荷！ " ,
-            text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
-          },
-          ] %>
-          <% for (var newslist of newslists) {%>
-            <div class="p-news__card">
-              <%- include('./parts/_c-card',{
-                modifier : newslist.modifier,  
-                img : newslist.img,  
-                title : newslist.title,  
-                text : newslist.text,  
-              }) %>
-            </div><!-- /.p-cards__item -->
-            <% } %>
-          </div><!-- /.p-news__card-item -->
-        </div><!-- /.p-news__card -->
-        <div class="p-news__btn">
+          </div><!-- /.p-blog__card-item -->
+        </div><!-- /.p-blog__card -->
+        <div class="p-blog__btn">
           <%- include('./parts/_c-btn',{ 
             modifier : 'c-btn--1' ,
-            text : 'news' 
+            text : 'blog' 
           }) %>
-        </div><!-- /.p-news__btn -->
+        </div><!-- /.p-blog__btn -->
       </div><!-- /.l-inner -->
-    </div><!-- /.p-news -->
-
-
-    <!-- 実績 -->
-   <div class="p-works | l-works">
-    <div class="l-inner">
-      <div class="p-works__title">
-        <%- include('./parts/_c-title',{en:' works', jp:' 実績 '}) %>
-      </div><!-- /.p-works__title -->
-      <div class="p-works__text">
-        <%- include('./parts/_c-text',{text:'これまでに当社にてインテリアコーディネートを担当させていただきました実績をご紹介させていただきます。<br>店舗からご自宅まで様々なコーディネートを行っております。'}) %>
-      </div><!-- /.p-works__text -->
-      <div class="p-works__cards">
-        <div class="p-works__cards-inner">
-          
-          <% const workslists=[
-          {
-            modifier:" c-card--works " ,
-            img:" ./images/common/image13.jpg " ,
-            title:" Restaurant O様 " ,
-            text:"  " ,
-          },
-          {
-            modifier:" c-card--works " ,
-            img:" ./images/common/image14.jpg " ,
-            title:" HOTEL Q様 " ,
-            text:" お待たせいたしました！<br>イタリアよりヴィンテージソファーが入稿いたしました！1... " ,
-          },
-          {
-            modifier:" c-card--works " ,
-            img:" ./images/common/image15.jpg " ,
-            title:" K様邸 " ,
-            text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
-          },
-          {
-            modifier:" c-card--works " ,
-            img:" ./images/common/image16.jpg " ,
-            title:" N様邸 " ,
-            text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
-          },
-          {
-            modifier:" c-card--works " ,
-            img:" ./images/common/image17.jpg " ,
-            title:" Restaurant O様 " ,
-            text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
-          },
-          ] %>
-          
-          <div class="swiper  js-slider"><!-- swiperの既存クラスで幅、高さは固定しないこと。するならJSで制御すること -->
-            <div class="swiper-wrapper">
-              <% for (var workslist of workslists) {%>
-                <div class="swiper-slide | p-works__card">
-              <%- include('./parts/_c-card',{
-                modifier : workslist.modifier,  
-                img : workslist.img,  
-                title : workslist.title,  
-                text : workslist.text,  
+    </div><!-- /.p-blog -->
+    
+    
+    <!-- スタッフブログ -->
+    <div class="p-staff">
+      <div class="l-inner">
+        <div class="p-staff__title">
+          <%- include('./parts/_c-title',{en:' staff blog', jp:'スタッフブログ '}) %>
+        </div><!-- /.p-staff__title -->
+        <div class="p-staff__text">
+          <%- include('./parts/_c-text',{text:'当社には、総勢24名のスタッフがおります。<br>ひとり一人、ブログを投稿しておりますので、是非ご覧ください。<br>意外な一面が見れるかもしれません！'}) %>
+        </div><!-- /.p-staff__text -->
+        <div class="p-staff__cards">
+          <div class="p-staff__cards-inner">
+            
+            <% const stafflists=[
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image4.jpg " ,
+              title:" 展示会in六本木 " ,
+              text:" 4月17日に六本木で行われた家具の展示館に参加させていただきました。... " ,
+            },
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image5.jpg " ,
+              title:" 勉強会 " ,
+              text:" 月に1回行われる当社の勉強会。今回は講師として◯◯さんにお越しいただき、レクシャーを行って... " ,
+            },
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image6.jpg " ,
+              title:" 家具のアウトレット " ,
+              text:" 千葉県にある家具のアウトレットショップへ行ってきました。<br>店内に並ぶ家具の数が多いこと多... " ,
+            },
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image7.jpg " ,
+              title:" 海外出張in Paris " ,
+              text:" みなさんこんにちは！<br> 私は今、海外出張でフランスのパリにきています。... " ,
+            },
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image8.jpg " ,
+              title:" 展示会inミラノ " ,
+              text:" 去年に引き続き、イタリアのミラノで毎年開催されている、ミラノサローネに参加して参りました。... " ,
+            },
+            {
+              modifier:" c-card--staff " ,
+              img:" ./images/common/image9.jpg " ,
+              title:" 新作 " ,
+              text:" こんにちは。恵比寿店の◯◯です。今回は、5日前にイタリアから届いたばかりの新作のチェアーをご紹... " ,
+            },
+            ] %>
+            <% for (var stafflist of stafflists) {%>
+              <div class="p-staff__card">
+                <%- include('./parts/_c-card',{
+                  modifier : stafflist.modifier,  
+                  img : stafflist.img,  
+                  title : stafflist.title,  
+                  text : stafflist.text,  
+                }) %>
+              </div><!-- /.p-cards__item -->
+              <% } %>
+            </div><!-- /.p-staff__card-item -->
+          </div><!-- /.p-staff__card -->
+          <div class="p-staff__btn">
+            <%- include('./parts/_c-btn',{ 
+              modifier : 'c-btn--2' ,
+              text : 'staff blog' 
+            }) %>
+          </div><!-- /.p-staff__btn -->
+        </div><!-- /.l-inner -->
+      </div><!-- /.p-staff -->
+      
+      
+      
+      <!-- お知らせ -->
+      <div class="p-news | l-news">
+        <div class="l-inner">
+          <div class="p-news__title">
+            <%- include('./parts/_c-title',{en:' news', jp:' お知らせ '}) %>
+          </div><!-- /.p-news__title -->
+          <div class="p-news__text">
+            <%- include('./parts/_c-text',{text:'こちらでは、当店の最新情報を発信していきます。<br>入荷情報やSALEの情報などお得な情報ばかりですので、是非チェックしてみてください！'}) %>
+          </div><!-- /.p-news__text -->
+          <div class="p-news__cards">
+            <div class="p-news__cards-inner">
+              
+              <% const newslists=[
+              {
+                modifier:" c-card--news " ,
+                img:" ./images/common/image10.jpg " ,
+                title:" お部屋をコーディネート " ,
+                text:" 空間デザイナーをお呼びして、お部屋をおしゃれにコーディネート！プロからのアドバイスをも... " ,
+              },
+              {
+                modifier:" c-card--news " ,
+                img:" ./images/common/image11.jpg " ,
+                title:" 新作入荷！ " ,
+                text:" お待たせいたしました！<br>イタリアよりヴィンテージソファーが入稿いたしました！1... " ,
+              },
+              {
+                modifier:" c-card--news " ,
+                img:" ./images/common/image12.jpg " ,
+                title:" 新作入荷！ " ,
+                text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
+              },
+              ] %>
+              <% for (var newslist of newslists) {%>
+                <div class="p-news__card">
+                  <%- include('./parts/_c-card',{
+                    modifier : newslist.modifier,  
+                    img : newslist.img,  
+                    title : newslist.title,  
+                    text : newslist.text,  
+                  }) %>
+                </div><!-- /.p-cards__item -->
+                <% } %>
+              </div><!-- /.p-news__card-item -->
+            </div><!-- /.p-news__card -->
+            <div class="p-news__btn">
+              <%- include('./parts/_c-btn',{ 
+                modifier : 'c-btn--1' ,
+                text : 'news' 
               }) %>
-              </div>
-            <% } %>
-        </div>
-      </div>
-          </div><!-- /.p-works__card-item -->
-        </div><!-- /.p-works__card -->
-        <div class="p-works__btn">
-          <%- include('./parts/_c-btn',{ 
-            modifier : 'c-btn--2' ,
-            text : 'works' 
-          }) %>
-        </div><!-- /.p-news__btn -->
-      </div><!-- /.l-inner -->
-    </div><!-- /.p-news -->
-  
-
-  </body>
-</html>
-
+            </div><!-- /.p-news__btn -->
+          </div><!-- /.l-inner -->
+        </div><!-- /.p-news -->
+        
+        
+        <!-- 実績 -->
+        <div class="p-works | l-works">
+          <div class="l-inner">
+            <div class="p-works__title">
+              <%- include('./parts/_c-title',{en:' works', jp:' 実績 '}) %>
+            </div><!-- /.p-works__title -->
+            <div class="p-works__text">
+              <%- include('./parts/_c-text',{text:'これまでに当社にてインテリアコーディネートを担当させていただきました実績をご紹介させていただきます。<br>店舗からご自宅まで様々なコーディネートを行っております。'}) %>
+            </div><!-- /.p-works__text -->
+            <div class="p-works__cards">
+              <div class="p-works__cards-inner">
+                
+                <% const workslists=[
+                {
+                  modifier:" c-card--works " ,
+                  img:" ./images/common/image13.jpg " ,
+                  title:" Restaurant O様 " ,
+                  text:"  " ,
+                },
+                {
+                  modifier:" c-card--works " ,
+                  img:" ./images/common/image14.jpg " ,
+                  title:" HOTEL Q様 " ,
+                  text:" お待たせいたしました！<br>イタリアよりヴィンテージソファーが入稿いたしました！1... " ,
+                },
+                {
+                  modifier:" c-card--works " ,
+                  img:" ./images/common/image15.jpg " ,
+                  title:" K様邸 " ,
+                  text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
+                },
+                {
+                  modifier:" c-card--works " ,
+                  img:" ./images/common/image16.jpg " ,
+                  title:" N様邸 " ,
+                  text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
+                },
+                {
+                  modifier:" c-card--works " ,
+                  img:" ./images/common/image17.jpg " ,
+                  title:" Restaurant O様 " ,
+                  text:" お待たせいたしました！<br>パリより新作のソファーが入荷いたしました！... " ,
+                },
+                ] %>
+                
+                <div class="swiper  js-slider"><!-- swiperの既存クラスで幅、高さは固定しないこと。するならJSで制御すること -->
+                  <div class="swiper-wrapper">
+                    <% for (var workslist of workslists) {%>
+                      <div class="swiper-slide | p-works__card">
+                        <%- include('./parts/_c-card',{
+                          modifier : workslist.modifier,  
+                          img : workslist.img,  
+                          title : workslist.title,  
+                          text : workslist.text,  
+                        }) %>
+                      </div>
+                      <% } %>
+                    </div>
+                  </div>
+                </div><!-- /.p-works__card-item -->
+              </div><!-- /.p-works__card -->
+              <div class="p-works__btn">
+                <%- include('./parts/_c-btn',{ 
+                  modifier : 'c-btn--2' ,
+                  text : 'works' 
+                }) %>
+              </div><!-- /.p-news__btn -->
+            </div><!-- /.l-inner -->
+          </div><!-- /.p-news -->
+          
+          
+        </body>
+        </html>
+        
+        
+   
