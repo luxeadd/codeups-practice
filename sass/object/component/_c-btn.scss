@@ -1,0 +1,51 @@
+@use 'global' as * ; 
+
+.c-btn {
+  display: inline-block;
+  padding: rem(10) rem(80); 
+  font-size: rem(24);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+}
+
+.c-btn--1{
+  background: $color-btn1;
+  color: $white;
+  transition: .3s;
+  border: 2px solid $color-btn1;
+
+}
+.c-btn--1:hover {
+  color: $color-btn1;
+  background: $white;
+  border: 2px solid $color-btn1;
+ 
+}
+
+
+.c-btn--2{
+  background: $white;
+  color: $color-btn1;
+  transition: .3s;
+  border: 2px solid $color-btn1;
+
+}
+.c-btn--2:hover {
+  color: $white;
+  background: $color-btn1;
+  border: 2px solid $color-btn1;
+  transform: translateY(-5px);
+ 
+}
+
+
+@include mq(tab) {
+  .c-btn {
+    padding: rem(10) rem(100); 
+    font-size: rem(32);
+   
+  }
+}

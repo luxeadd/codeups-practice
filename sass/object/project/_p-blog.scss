@@ -1,0 +1,83 @@
+@use 'global' as * ; 
+
+.p-blog {
+padding: rem(40) 0 rem(100);
+position: relative;
+}
+.p-blog::after {
+  content: "";
+  display: block;
+  width: 69%;
+  height: 100%;
+  background: $color-back2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+}
+
+.p-blog__title {
+text-align: center;
+}
+
+.p-blog__text {
+margin-top: rem(20);
+
+}
+
+.p-blog__cards {
+margin-top: rem(18);
+}
+
+.p-blog__cards-inner {
+padding: 0 rem(20);
+}
+
+.p-blog__card {
+  margin-top: rem(18);
+}
+
+.p-blog__btn {
+margin-top: rem(14);
+text-align: center;
+}
+
+
+
+@include mq(tab) {
+  .p-blog {
+    padding: rem(100) 0;
+    }
+    .p-blog::after {
+      width: 50%;
+    }
+
+    .p-blog__text {
+      margin-top: rem(48);
+      text-align: center;
+      
+      }
+      
+      .p-blog__cards {
+      margin-top: rem(42);
+      }
+
+      .p-blog__cards-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: rem(-56);
+        padding: 0;
+    
+      }
+
+      .p-blog__card {
+        width: calc(33.3% - #{rem(56)} * 3 / 3);
+        margin-left: rem(56);
+        margin-top: 0;
+      }
+      
+      .p-blog__btn {
+      margin-top: rem(54);
+      }
+}

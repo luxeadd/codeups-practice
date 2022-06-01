@@ -1,0 +1,77 @@
+@use 'global' as * ; 
+
+.p-works {
+padding: rem(8) 0 rem(100);
+position: relative;
+}
+
+.p-works::after {
+  content: "";
+  background: $color-back2;
+  display: block;
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+.p-works__title {
+text-align: right;
+}
+
+.p-works__text {
+margin-top: rem(10);
+text-align: center;
+
+}
+
+.p-works__cards {
+margin-top: rem(17);
+
+}
+
+.p-works__cards-inner {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+.p-works__card {
+ 
+  
+}
+
+.p-works__btn {
+margin-top: rem(56);
+text-align: center;
+}
+
+
+
+@include mq(tab) {
+  .p-works {
+    padding: rem(140) 0 rem(140);
+    }
+    .p-works::after {
+      width: 50%;
+      height: 100%;
+    
+    }
+
+    .p-works__text {
+      margin-top: 0;
+      
+      }
+      
+      .p-works__cards {
+      margin-top: rem(75);
+      }
+
+  
+      
+      .p-works__btn {
+      margin-top: rem(80);
+      }
+}

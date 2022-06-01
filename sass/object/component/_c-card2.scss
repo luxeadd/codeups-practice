@@ -1,0 +1,118 @@
+@use 'global' as * ; 
+
+.c-card2 {
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+ 
+}
+
+.c-card2__head {
+
+}
+
+.c-card2__img {
+ width: 100%;
+ position: relative;
+}
+
+.c-card2__img::after {
+  display: block;
+  content: "";
+}
+
+.c-card2__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c-card2__body {
+ padding: rem(20);
+ position: relative;
+ transition: .3s;
+ overflow: hidden;
+}
+
+.c-card2__title {
+font-size: rem(20);
+
+}
+
+.c-card2__text {
+  font-size: rem(16);
+  margin-top: rem(10);
+  
+}
+
+.c-card2__text,
+.c-card2__title {
+  position: relative;
+  z-index: 2;
+}
+.c-card2:hover {
+  .c-card2__text,
+  .c-card2__title{
+    color: $white;
+  }
+}
+
+
+.c-card2--news .c-card2__img::after {
+  padding-top: calc(200 / 320) * 100%; //画像縦 / 横
+}
+.c-card2--news .c-card2__body {
+ background: $color-sub1;
+}
+.c-card2--news .c-card2__body::after {
+ content: "";
+ display:  block;
+ width: 100%;
+ height: 100%;
+  background: $color-sub4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: .3s;
+  }
+.c-card2--news:hover {
+  .c-card2__body::after {
+   transform: translate(0);
+ }
+
+}
+
+
+.c-card2--staff .c-card2__img::after {
+  padding-top: calc(200 / 296) * 100%; //画像縦 / 横
+}
+.c-card2--staff .c-card2__body {
+ background: $white;
+
+}
+.c-card2--staff .c-card2__body::after {
+  content: "";
+  display:  block;
+  width: 100%;
+  height: 100%;
+   background: $color-sub5;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%) scale(0.1);
+   opacity: 0;
+   transition: .3s;
+   }
+ .c-card2--staff:hover {
+   .c-card2__body::after {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 1;
+  }
+ 
+ }

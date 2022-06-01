@@ -1,0 +1,31 @@
+@use 'global' as * ; 
+.c-title {
+  display: inline-block;
+  text-align: center;
+}
+
+.c-title__en {
+font-size: rem(32);
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.c-title__jp {
+  font-size: rem(16);
+  display: inline-block;
+  border-bottom: 1px solid $color-line1;
+  
+}
+
+@include mq(tab) {
+  .c-title__en {
+    font-size: rem(48);
+    
+  }
+  
+  .c-title__jp {
+    font-size: rem(24);
+    border-bottom: 2px solid $color-line1;
+    
+    }
+}
