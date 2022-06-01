@@ -1,0 +1,49 @@
+<header class="l-header p-header js-header">
+  <div class="p-header__inner">
+
+   <!-- ヘッダーロゴ  トップページのみh1タグ-->
+   <% if (param === 'top') { %>
+    <h1 class="p-header__logo">
+      <a href="">
+       <img class="logo" src="" alt="タイトルロゴ">
+      </a>
+    </h1><!-- /.header__logo -->
+  <% } else { %>
+    <div class="p-header__logo">
+      <a href="">
+       <img class="logo" src="" alt="タイトルロゴ">
+      </a>
+    </div><!-- /.header__logo -->
+  <% } %>
+
+    <!-- ドロワーアイコン  -->
+    <button type="button" id="js-hamburger" class="p-header__drawer c-hamburger" aria-controls="js-drawer-menu" aria-expanded="false" area-label="メニューを開閉する">
+       <span class="c-hamburger__line"></span>
+     </button>
+        
+    <!-- ドロワーメニュー -->
+     <div class=" p-header__drawer-menu  p-drawer-menu" id="js-drawer-menu" area-hidden="true">
+       <ul class="p-drawer-menu__items">
+         <li id="js-drawer-menu__item" class="p-drawer-menu__item  "><a href="">リスト</a></li>
+          <li id="js-drawer-menu__item" class="p-drawer-menu__item"><a href="">リスト</a></li>
+          <li id="js-drawer-menu__item" class="p-drawer-menu__item"><a href="">リスト</a></li>
+          <li id="js-drawer-menu__item" class="p-drawer-menu__item"><a href="">リスト</a></li>
+        </ul>
+      </div><!-- /.p-header-menu -->
+  
+        <!-- pcーメニュー -->
+      <nav class="p-header__pc-menu p-header-menu ">
+        <ul class="p-header-menu__items">
+          <li class="p-header-menu__item"><a href="">お知らせ</a></li><!-- /.pc-menu__item -->
+          <li class="p-header-menu__item"><a href="">事業内容</a></li><!-- /.pc-menu__item -->
+          <li class="p-header-menu__item"><a href="">制作実績</a></li><!-- /.pc-menu__item -->
+          <li class="p-header-menu__item"><a href="">企業概要</a></li><!-- /.pc-menu__item -->
+          <li class="p-header-menu__item"><a href="">ブログ</a></li><!-- /.pc-menu__item -->
+        </ul><!-- /.pc-menu__items -->
+      </nav><!-- /.header__menu -->
+
+      <!-- ドロワーメニュー展開時背景 -->
+      <div class="p-header__overlay" id="js-header__overlay"></div>
+
+    </div><!-- /.header__inner -->
+   </header>
