@@ -44,7 +44,6 @@ let slider1 = new Swiper ('.js-slider', {
     speed: 4000,
     //ループの有無
     loop: true,
-  
      loopedSlides: 5,
      spaceBetween: 40,
      width: 320,
